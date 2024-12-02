@@ -17,12 +17,17 @@ $trabajador3->imprimir();
 
 
 //EJERCICIO 2
+include "NIVEL1\\shape.php";
 include "NIVEL1\\rectangulo.php";
+include "NIVEL1\\triangulo.php";
 
 $rectangulo1 = new Rectangulo(10,20);
 
-$rectangulo1->calcularArea();
+echo "Área rectangulo: ".$rectangulo1->calcularArea(). PHP_EOL;
 
+$triangulo1= new Triangulo (10,20);
+
+echo "Área triángulo: ".$triangulo1->calcularArea(). PHP_EOL;
 
 
 ?>
