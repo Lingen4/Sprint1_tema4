@@ -7,7 +7,7 @@ class Employee
     private float $sueldo;
 
 
-    public function initialize($name, $salary)
+    public function initialize(string $name, float $salary):void
     {
         $this->nombre = $name;
         $this->sueldo = $salary;
@@ -15,15 +15,19 @@ class Employee
 
     public function imprimir():void{
         
-        echo "Trabajador: " .$this->nombre."\t"."Sueldo: ".$this->sueldo."-->";
+        echo "Trabajador: " .$this->nombre."\t"."Sueldo: ".$this->sueldo;
+        
+    }
+
+    public function pagaImpuestos():void{
 
         if ($this->sueldo>6000){
-            echo "Debe pagar impuestos\n";
+            echo "\t--> Debe pagar impuestos\n";
         }else{
-            echo "No paga impuestos\n";
+            echo "\t--> No paga impuestos\n";
         }
-
-        PHP_EOL;
     }
+
+
 
 }

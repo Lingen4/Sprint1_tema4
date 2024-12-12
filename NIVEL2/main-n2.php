@@ -2,21 +2,21 @@
 
 //NIVEL 2
 //EJERCICIO 1
-include "NIVEL2\\pokerdice.php";
+require_once "pokerdice.php";
 
-$dado1= new Pokerdice();
+$dados=[];
+for ($i=0; $i<5;$i++){
+    $dado = new Pokerdice ();
+    $dados= [$dado];
+}
 
-echo $dado1->throw();
-$dado1->shapeName();
-echo "\n";
 
 $salir = false;
 while ($salir == false){
-for ($i=0; $i<5;$i++){
-    $dadoNuevo = new Pokerdice();
-    echo $dadoNuevo->throw();
-    $dadoNuevo->shapeName();
-    echo "\t";
+
+foreach($dados as $dado){
+    $dado->throw();
+    $dado->shapeName();
 }
 $confirmacion=readline("Quieres volver a tirar? S/N--> ")[0];
 if (is_string($confirmacion)){

@@ -3,7 +3,7 @@
 class Rectangulo extends Shape{
 
 
-    public function calcularArea(){
+    public function calcularArea():int|float{
 
     return $this->alto*$this->ancho;
 
