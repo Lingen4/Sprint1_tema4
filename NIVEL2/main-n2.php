@@ -1,7 +1,6 @@
 <?php
 
-//NIVEL 2
-//EJERCICIO 1
+
 require_once "pokerdice.php";
 
 $dados=[];
