@@ -9,7 +9,6 @@ for ($i=0; $i<5;$i++){
     $dados[]= $dado;
 }
 
-print_r($dados);
 
 $salir = false;
 while (!$salir){
