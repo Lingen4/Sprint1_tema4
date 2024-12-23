@@ -7,12 +7,13 @@ require_once "pokerdice.php";
 $dados=[];
 for ($i=0; $i<5;$i++){
     $dado = new Pokerdice ();
-    $dados= [$dado];
+    $dados[]= $dado;
 }
 
+print_r($dados);
 
 $salir = false;
-while ($salir == false){
+while (!$salir){
 
 foreach($dados as $dado){
     $dado->throw();
